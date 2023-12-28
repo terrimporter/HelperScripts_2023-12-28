@@ -1,0 +1,7 @@
+#!/bin/zsh
+#Updated Nov. 13/17 to exclude some dir
+#Updated Sept. 5, 2017 to back up to new directory
+#Written by Terri Porter, Dec. 22, 2016
+#Automate backups every week of my home directory only for now
+
+sudo rsync -av --progress --exclude '/home/terri/backup_exclude.txt' --log-file=/home/terri/backup_logfiles/$(date +%m%d%Y)_rsync.log /home/terri /media/terri/backups 

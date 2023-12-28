@@ -1,0 +1,10 @@
+#!/bin/bash
+#September 30, 2009 by Terri Porter
+#Script to automatically run Gblocks on a file containing muscle.out protein alignments
+
+DIR="/home/terri/from_muscle_082112"
+for i in $(ls $DIR);
+do
+	gblocks $DIR/$i -b4=2 -b5=h -b6=y -t=p -p=y -k=y -e=.gb15 -g
+done
+
